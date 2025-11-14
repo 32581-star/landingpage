@@ -1,7 +1,6 @@
 import "./App.css";
 import bgImage from "./assets/DMC.jpg";
 import capcomLogo from "./assets/capcom-logo.png";
-import trailer from "./assets/DMC-trailer.mp4";
 
 export default function App() {
   return (
@@ -10,7 +9,7 @@ export default function App() {
       {/* MENU SUPERIOR */}
       <div className="navbar">
         <img src={capcomLogo} width="150" />
-        
+
         <div className="nav-links">
           <a href="#">NEWS</a>
           <a href="#">GAME INFO</a>
@@ -33,7 +32,13 @@ export default function App() {
       {/* CONTEÚDO PRINCIPAL */}
       <div className="main-content">
         <div className="video-box">
-          <video src={trailer} controls />
+          <iframe
+            src="https://www.youtube.com/embed/g_2VZvi0fQ0"
+            title="DMC 5 Trailer"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
 
@@ -41,7 +46,6 @@ export default function App() {
       <p className="bottom-text">
         The ultimate demon hunter is back in style, in the game action fans have been waiting for.
       </p>
-
     </div>
   );
 }
